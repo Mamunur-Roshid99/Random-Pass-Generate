@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Password Generate</title>
+    <link rel="stylesheet" href="style.css" type="text/tailwindcss">
     <!-- tailwind css cdn -->
     <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- tailwind css plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 </head>
-<body class="">
+<body class="bg-cyan-900 h-screen flex items-center px-9 sm:ml-32">
+
     <div class="container">
-        <h1>Generate a <br> <span>Random Password</span></h1>
-        <div>
-            <input type="text" id="password" readonly>
-            <img src="images/copy.png" alt="">
+        <h1 class="text-white text-3xl font-semibold tracking-wide mb-12 sm:text-5xl sm:mb-16">Generate a <br> <span class="text-green-600 underline">Random Password</span></h1>
+        <div class="flex items-center relative mb-16 sm:w-[50%]">
+            <input type="text" id="password" placeholder="Password" class="absolute w-full h-[60px] border-none outline-none rounded-2xl">
+            <img src="images/copy.png" alt="copy" id="Copy" class="absolute w-[20px] right-0 mx-5 cursor-pointer hover:w-[15px]">
         </div>
-        <button> <img src="images/generate.png" alt=""> Generate Password</button>
+        <button id="btn" class="flex items-center justify-center gap-2 bg-green-700 p-3 text-white font-normal tracking-wider rounded-lg"> <img src="images/generate.png" alt="generate" class="w-[20px]"> Generate Password</button>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
